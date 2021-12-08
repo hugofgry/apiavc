@@ -1,5 +1,5 @@
 fastapi
 uvicorn
 dnspython
-BeautifulSoup4
 pandas
+sklearn 
