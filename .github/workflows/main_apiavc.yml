@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -35,7 +35,7 @@ jobs:
           path: ${{env.DOTNET_ROOT}}/myapp
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: build
     environment:
       name: 'Production'
@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'apiavc'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5178322678134CBFA52E0CC3661A9A4D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AC1F5F8ECAEB4EA1ADEBD3049548AF48 }}
           package: .
