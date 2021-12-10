@@ -1,8 +1,18 @@
-import pandas as pd 
+import pandas as pd
+from Database import Databases
 
-class Data : 
-    
-    df_avc = pd.read_csv("data/healthcare-dataset-stroke-data.csv", sep= ",")
-    df_avc.dropna(inplace=True)
-    y = df_avc['stroke']
-    X = df_avc.drop(['stroke','id'], axis=1)
+a = Databases()
+
+
+class Data() :
+
+    def manip(self):
+
+        df_avc = pd.read_sql("SELECT * FROM avc;", a.engine)
+        df_avc.dropna(inplace=True)
+
+        y = df_avc['stroke']
+        X = df_avc.drop(['stroke','id','index'], axis=1)
+
+        return X, y
+

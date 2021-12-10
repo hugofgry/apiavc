@@ -2,4 +2,4 @@ fastapi
 uvicorn
 dnspython
 pandas
-sklearn 
+sklearn

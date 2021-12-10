@@ -7,7 +7,7 @@ app = FastAPI(title="AVC")
 a= Model()
 
 @app.get("/prediction")
-async def predict(gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status):       
+async def predict(gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status):
 
     gender = str(gender)
     age = int(age)
