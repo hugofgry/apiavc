@@ -4,3 +4,4 @@ dnspython
 pandas
 sklearn
 psycopg2
+sqlalchemy
